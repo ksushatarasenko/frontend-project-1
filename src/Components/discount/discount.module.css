@@ -1,0 +1,135 @@
+.wrapper{
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'img text'
+        'img form';
+    height: 470px;
+    color: white;
+    font-weight: 700;
+    margin-top: 80px;
+}
+.text{
+    margin-top: 5%;
+    grid-area: text;
+}
+
+.h1{
+    font-size: 90px;
+}
+.h2{
+    font-size: 50px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    gap: 20px;
+}
+
+.input, .btn{
+    border-radius: 25px;
+    border: none;
+    padding-left: 10%;
+    height: 70px;
+    color: black;
+    font-size: 20px;
+    transition: transform 0.5s ease;
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;   
+    color: white;
+}
+.btn:hover{
+    transform: scale(0.97);
+    background-color: #017301;
+}
+.input:hover{
+    transform: scale(0.95);
+    background-color: gainsboro;
+}
+.img{
+    grid-area: img;
+}
+
+  .img img{
+    max-width: 420px;
+    margin-top: 6%;
+    margin-left: 10%;
+  }
+
+  .error_message{
+    color: rgb(172, 4, 4);
+    text-align: center;
+  }
+  @media (max-width: 900px){
+    .img img{
+        max-width: 300px;
+
+    }
+    .h1{
+        font-size: 60px;
+    }
+    .h2{
+        font-size: 30px;
+    }
+    .input, .btn{
+        /* width: 300px; */
+        height: 50px;
+    }
+  }
+  @media (max-width: 670px){
+    .input, .btn{
+        height: 50px;
+    }
+    .btn{
+        font-size: 20px;
+    }
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'img text'
+        'form form';
+    }
+    .form{
+        grid-area: form;
+        margin-left: 20%;
+    }
+    .img img{
+        max-width: 200px;
+    }
+  }
+
+  @media (max-width: 420px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+    .h1{
+        font-size: 30px;
+    }
+    .h2{
+        font-size: 20px;
+    }
+    .img img{
+        max-width: 150px;
+        margin-top: 0;
+    }
+    .input, .btn{
+        height: 30px;
+        
+    }
+  }
