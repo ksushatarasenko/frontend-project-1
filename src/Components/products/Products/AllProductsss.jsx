@@ -48,7 +48,7 @@ const AllProducts = observer(() => {
               <div className={prod.image} >
                   <Link to={`/products/${product.id}`}>
                       <img 
-                        src={`http://localhost:3333/${product.image}`} 
+                        src={`${process.env.REACT_APP_API_BASE_URL}/${product.image}`} 
                         alt={product.id} 
                         />          
                   </Link>  

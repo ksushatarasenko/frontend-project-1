@@ -57,7 +57,7 @@ const SingleProduct = observer(() => {
                 <div className={cardProd.wrapper}>
                  
                     <img 
-                      src={`http://localhost:3333/${product.image}`} 
+                      src={`${process.env.REACT_APP_API_BASE_URL}/${product.image}`} 
                       alt={product.id} 
                       className={cardProd.image}
                       onClick={handleOnclickBigImg}

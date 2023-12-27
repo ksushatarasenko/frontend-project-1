@@ -22,7 +22,7 @@ const AddItem = observer(() => {
                 <div key={item.product.id} >
                     <div className={order.item}>
                         <div className={order.image}>
-                            <img src={`http://localhost:3333/${item.product.image}`} alt="" />
+                            <img src={`${process.env.REACT_APP_API_BASE_URL}/${item.product.image}`} alt="" />
                         </div>
 
                         <div className={order.title_counter}>                           

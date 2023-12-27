@@ -22,7 +22,7 @@ const Categories = observer(({limit}) => {
             {allCategories.slice(0, limit).map((categorie) => (
               <div key={categorie.id}  className={categor.item}>
                 <Link to={`/categories/${categorie.id}`}>
-                  <img src={`http://localhost:3333/${categorie.image}`} alt={categorie.id} className={categor.image}/>
+                  <img src={`${process.env.REACT_APP_API_BASE_URL}/${categorie.image}`} alt={categorie.id} className={categor.image}/>
                 </Link>
                 
                 <div className={categor.link}>

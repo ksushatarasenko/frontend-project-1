@@ -21,7 +21,8 @@ class ProductsStore {
     async getAllProducts() {
         this.isLoading = true;
         try{
-          const responce = await axios.get('http://localhost:3333/products/all');
+          // const responce = await axios.get('http://localhost:3333/products/all');
+          const responce = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/products/all`);
           this.products = responce.data
         } catch (err){
           console.error('Loading error ....',err);
@@ -33,7 +34,8 @@ class ProductsStore {
     async getSingleProduct(id){
       this.isLoading = true;
       try {
-        const responce = await axios.get(`http://localhost:3333/products/${id} `);
+        // const responce = await axios.get(`http://localhost:3333/products/${id} `);
+        const responce = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/products/${id} `);
         this.singleProduct = responce.data
       } catch (error) {
         console.error("Loading....", error)
@@ -45,7 +47,9 @@ class ProductsStore {
     async getAllCategories(){
       this.isLoading = true;
       try {
-        const responce = await axios.get('http://localhost:3333/categories/all');
+        // const responce = await axios.get('http://localhost:3333/categories/all');
+        const responce = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/categories/all`);
+
         this.allCategories = responce.data;
       } catch (err) {
         console.error('Loading...', err);
@@ -57,7 +61,9 @@ class ProductsStore {
     async getSingleCategory(id){
       this.isLoading = true;
       try {
-        const response = await axios.get(`http://localhost:3333/categories/${id}`)
+        // const response = await axios.get(`http://localhost:3333/categories/${id}`)
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/categories/${id}`)
+
         this.singleCategory = response.data.data;
       } catch (error) {
         console.error("Loading error ...", error);
@@ -68,7 +74,9 @@ class ProductsStore {
 // ========= Discount ============
 async sendCoupon (phoneNumber){
   try {
-      const response = await axios.post('http://localhost:3333/sale/send', { phoneNumber });
+      // const response = await axios.post('http://localhost:3333/sale/send', { phoneNumber });
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/sale/send`, { phoneNumber });
+
       console.log("Successful response from the server:", response.data);
       return response.data;
   } catch (error) {

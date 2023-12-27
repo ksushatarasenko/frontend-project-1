@@ -29,7 +29,7 @@ const ModalAddItems = observer (() => {
                         {/* card product */}
                         <div className={modalAddItem.item}>
                             <div className={modalAddItem.image}>
-                                <img src={`http://localhost:3333/${item.product.image}`} alt="" />
+                                <img src={`${process.env.REACT_APP_API_BASE_URL}/${item.product.image}`} alt="" />
                             </div>
     
                             <div className={modalAddItem.title_counter}>                           

@@ -104,7 +104,7 @@ class CartStore {
       
       try {
           if (this.items.length > 0) {
-              const response = await axios.post('http://localhost:3333/order/send', this.items);
+              const response = await axios.post('${process.env.REACT_APP_API_BASE_URL}/order/send', this.items);
               this.orderInfo = response.data;
               console.log("Успешный ответ от сервера:", response.data);
           }
