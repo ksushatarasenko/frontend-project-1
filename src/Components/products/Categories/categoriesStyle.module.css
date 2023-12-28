@@ -37,20 +37,33 @@
     font-size: 18px;
     text-align: center;
     font-weight: 600;
-    margin-left: 40%;
 }
 
 .link{
     margin-top: 20px;
+    text-align: center;
 }
 .link a{
-    text-decoration: none;
-
+    text-decoration: none;  
 }
 
 @media (max-width: 420px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .titleP{
+        margin-left: 1%;
+    }
     .image{
         width: 118px;
         height: 120px;
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }

@@ -159,15 +159,21 @@
   
 }
 @media (max-width: 550px){
-    .wrapper{
-        flex-direction: row;
+    
+    .logoMenu{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .burger_menu_container{
+        flex-direction: column;
+        gap: 0;
+        bottom: 40px;
+        display: block;
     }
     .menu{
         display: none;
     }
-    .burger_menu_container{
-        display: block;
-    }
+
     .burger_menu a{
         text-decoration: none;
         color: black;   
@@ -198,6 +204,7 @@
         padding: 5px;
         margin-bottom: 100px;
     }
+    
 
     .logo{
         flex-direction: column; 
